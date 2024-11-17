@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEventoApp.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0a1172" Offset="0.0" />
+            <GradientStop Color="#82eefd" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Evento Desenvolvendo sistemas"
+                   HorizontalTextAlignment="Center" 
+                   FontSize="36" 
+                   TextColor="#bdffff" 
+                   FontAttributes="Italic" />
+
+            <Label Text="Cadastro de Participantes"
+                   HorizontalTextAlignment="Center" 
+                   FontSize="24"
+                   TextColor="#b4ff9a" />
+
+        
+            <Label Text="Nome do Convidado"
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#b4ff9a" 
+                   FontSize="18" />
+            <Entry x:Name="NomeEntry" 
+                   Placeholder="Informe o nome"
+                   FontSize="16" />
+
+            <Label Text="Data de Início"
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#b4ff9a" 
+                   FontSize="18" />
+            <DatePicker x:Name="DataInicioPicker" />
+            
+            <Label Text="Data de Término"
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#b4ff9a" 
+                   FontSize="18" />
+            <DatePicker x:Name="DataTerminoPicker" />
+
+            <Label Text="Número de Participantes"
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#b4ff9a" 
+                   FontSize="18" />
+            <Entry x:Name="ParticipantesEntry" 
+                   Keyboard="Numeric" 
+                   Placeholder="Informe o número"
+                   FontSize="16" />
+            
+            <Label Text="Custo por Participante"
+                   HorizontalTextAlignment="Center" 
+                   TextColor="#b4ff9a" 
+                   FontSize="18" />
+            <Entry x:Name="CustoEntry" 
+                   Keyboard="Numeric" 
+                   Placeholder="Informe o custo"
+                   FontSize="16" />
+
+            <Button Text="Cadastrar Evento" 
+                    Clicked="OnCadastrarEventoClicked" 
+                    BackgroundColor="CadetBlue"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="10" 
+                    Padding="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
